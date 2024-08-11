@@ -1,0 +1,36 @@
+
+.main-header{
+    /* background-image: url("images/header.jpg"); */
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: .5em;
+}
+
+nav a:hover{
+    background-color: rgba(66, 66, 66, 0.6);
+}
+
+
+.top-nav{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+

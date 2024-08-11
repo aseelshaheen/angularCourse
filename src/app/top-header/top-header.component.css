@@ -19,6 +19,13 @@ html, body{
 *{
     box-sizing: border-box;
     font-family:"Bona Nova SC";
-    color: #777;
-   
+}
+
+p{
+    color: azure;
+    text-align: center;
+}
+
+div{
+    background-color: black;
 }
