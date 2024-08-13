@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: "Booter - Zero Zero";
     src: url("https://yourdomain.com/path/to/Booter - Zero Zero.woff") format("woff"),
@@ -12,13 +14,14 @@
 
 html, body{
     padding: 0;
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
 }
 
 
 *{
     box-sizing: border-box;
-    font-family:"Bona Nova SC";
+    font-family: 'Work Sans', sans-serif;
     color: #777;
    
 }
