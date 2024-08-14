@@ -1,0 +1,20 @@
+<div class="container display">
+    <product4-images></product4-images>
+    <br>
+    <h2><strong>Name: </strong>{{product.name}}</h2>
+    <h4><strong>Colors: </strong>{{product.Colors}}</h4>
+    <h4><strong>Price: </strong>{{product.price}}</h4>
+    <h4><strong>Discounted Price: </strong>{{getDiscountPrice()}}</h4>
+    <h5>{{getStockMessage()}}</h5>
+    <br> <br> <br>
+    <fieldset> 
+        <legend>About Item</legend>
+        <p><strong>Design: </strong>{{product.Design}} <br>
+        <strong>Sound: </strong>{{product.Sound}} <br>
+        <strong>Battery Life: </strong>{{product.BatteryLife}} <br>
+        <strong>Features: </strong>{{product.Features}}</p>
+    </fieldset>
+    <br>
+    <button role="button" class="btn custom-btn">Add To Cart</button>
+    <br>
+</div>

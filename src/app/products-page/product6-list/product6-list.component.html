@@ -1,0 +1,26 @@
+<div class="container display">
+    <product6-images></product6-images>
+    <br>
+
+    <h2><strong>Name: </strong>{{product.name}}</h2>
+    <h4><strong>Colors: </strong>{{product.Colors}}</h4>
+    <h4><strong>Price: </strong>{{product.price}}</h4>
+    <h4><strong>Discounted Price: </strong>{{getDiscountPrice()}}</h4>
+    <h5>{{getStockMessage()}}</h5>
+    <br> <br> <br>
+
+    <fieldset> 
+        <legend>About Item</legend>
+        <p><strong>Resolution: </strong>{{product.Resolution}} <br>
+        <strong>Processor: </strong>{{product.Processor}} <br>
+        <strong>Storage: </strong>{{product.Storage}} <br>
+        <strong>Features: </strong>{{product.Features}} <br>
+        <strong>Audio: </strong>{{product.Audio}} <br>
+        <strong>Connectivity: </strong>{{product.Connectivity}} <br>
+        <strong>Software: </strong>{{product.Software}}</p>
+    </fieldset>
+    <br>
+
+    <button role="button" class="btn custom-btn">Add To Cart</button>
+    <br>
+</div>

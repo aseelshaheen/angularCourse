@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../../header/header.component';
+import { TopMenuComponent } from '../../header/top-menu/top-menu.component';
+import { MainMenuComponent } from '../../header/main-menu/main-menu.component';
+import { TopHeaderComponent } from "../../top-header/top-header.component";
+
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent,
+    TopMenuComponent, 
+    MainMenuComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'] 
 })
-export class HomeComponent {
+export class HomeComponent {}
 
-}

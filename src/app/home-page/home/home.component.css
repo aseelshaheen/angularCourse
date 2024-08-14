@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slideShow 15s infinite;
+}
+
+@keyframes slideShow {
+    0% { background-image: url('/assets/image4.jpg'); }
+    33.33% { background-image: url('/assets/image2.jpg'); }
+    66.66% { background-image: url('/assets/image5.jpg'); }
+    100% { background-image: url('/assets/image4.jpg'); }
+}
+
+.store-name {
+    text-align: left;
+    margin: 15px;
+    font-size: 4.5em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    font-size: 6em;
+    color: white;
+}
