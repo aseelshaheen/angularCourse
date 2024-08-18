@@ -6,8 +6,8 @@
 .custom-btn {
   height: 40px;
   width: 400px;
-  background-color: rgba(90, 143, 188, 0.6);
-  border: 1px solid rgba(90, 143, 188);
+  background-color: rgba(33, 164, 140, 0.6);
+  border: 1px solid rgba(33, 164, 140);
   color: aliceblue;
   font-family: 'Maven Pro', sans-serif;
 }
@@ -65,5 +65,15 @@
     flex-wrap: wrap; 
     gap: 30px; 
 }
+
+.section-name{
+  text-align: center;
+  margin: 15px;
+  font-size: 4.5em;
+  font-family: "Booter - Zero Zero";
+  font-weight: normal;
+
+}
+
 
 

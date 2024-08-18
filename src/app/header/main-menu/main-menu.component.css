@@ -1,55 +1,77 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 @font-face {
-    font-family: "Booter - Zero Zero";
-    src: url("https://yourdomain.com/path/to/Booter - Zero Zero.woff") format("woff"),
-         url("https://yourdomain.com/path/to/Booter - Zero Zero.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Booter - Zero Zero";
+  src: url("https://yourdomain.com/path/to/Booter - Zero Zero.woff")
+      format("woff"),
+    url("https://yourdomain.com/path/to/Booter - Zero Zero.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.main-header{
-    /* background-image: url("images/header.jpg"); */
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
+.main-header {
+  /* background-image: url("images/header.jpg"); */
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
 }
 
-nav ul{
-    margin: 0;
+nav ul {
+  margin: 0;
 }
 
-nav li{
-    display: inline;
+nav li {
+  display: inline;
 }
 
-nav a{
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    padding: .5em;
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 0.5em;
 }
 
-nav a:hover{
-    background-color: rgba(66, 66, 66, 0.6);
+nav a:hover {
+  background-color: rgba(66, 66, 66, 0.6);
 }
 
-
-.main-nav{
-    text-align: center;
-    align-items: center;
-    border-bottom: 1px solid rgb(255, 255, 255,0.5) ;
-    font-size: 1.1em;
-    font-weight: lighter;
-    bottom: 300px;
+.main-nav {
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+  font-size: 1.4em;
+  font-weight: lighter;
+  bottom: 300px;
 }
 
-.main-nav li{
-    padding: 0 1%;
+.main-nav li {
+  padding: 0 1%;
 }
 
-.search-btn{
-width: 30px;
-height: 33px;
+.search-btn {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: color 0.25s;
+  width: 25px;
+  height: 25px;
+}
+
+.search {
+  display: inline-flex;
+  align-items: center;
+  background-image: linear-gradient(40deg, #111, #269492);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  height: 40px;
+}
+
+.search :is(input, button) {
+  background: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
 }

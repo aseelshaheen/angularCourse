@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Product1ImagesComponent } from "../products-page/product1-images/product1-images.component";
 import { Product2ImagesComponent } from "../products-page/product2-images/product2-images.component";
 import { Product3ImagesComponent } from "../products-page/product3-images/product3-images.component";
@@ -16,9 +17,15 @@ import { Product6ImagesComponent } from "../products-page/product6-images/produc
     Product3ImagesComponent,
     Product4ImagesComponent,
     Product5ImagesComponent, 
-    Product6ImagesComponent]
+    Product6ImagesComponent,
+    RouterModule
+  ]
 })
-export class ProductsComponent { }
+export class ProductsComponent {
+   
+
+
+ }
 
 // import { Component } from '@angular/core';
 // import { Product1ImagesComponent } from "../products-page/product1-images/product1-images.component";
