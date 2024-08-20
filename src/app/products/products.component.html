@@ -1,134 +1,30 @@
-<br />
-<br />
-<br />
-<h1 class="section-name">Apple Products</h1>
-<br />
-<br />
+
 <section class="images-products-container">
-  <div class="products-container">
-    <product1-images></product1-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
+  @for (product of products; track product) {
 
-  <div class="products-container">
-    <product2-images></product2-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <product3-images></product3-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <product4-images></product4-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <product5-images></product5-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <product6-images></product6-images>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-</section>
-<br />
-<br />
-<br />
-<h1 class="section-name">Samsung Products</h1>
-<br />
-<br />
-<section class="images-products-container">
-  <div class="products-container">
+  <div class="product-container">
     <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product7/product71.jpg" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product7/product72.jpeg" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product7/product73.jpg" alt="Image 2" />
-      </div>
+      @for (image of product.images; track image) {
+        <img src="{{ image }}" class="slide" />
+      }
     </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
 
-  <div class="products-container">
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product8/product81.jpg" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product8/product82.jpg" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product8/product83.jpg" alt="Image 2" />
-      </div>
+    <p class="product-name">{{ product.name }}</p>
+    
+    <div>
+      @for (attribute of product.attributes; track attribute) {
+        <p class="description">
+          <strong>{{ attribute.key }}:</strong> {{ attribute.value }}
+        </p>
+      }
     </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
+    
+    <p>{{ product.id }}</p>
 
-  <div class="products-container">
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product9/product91.jpg" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product9/product92.jpg" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product9/product93.jpg" alt="Image 2" />
-      </div>
-    </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
+    <button (click)="viewProductDetails(product.id)" class="btn custom-btn">
+      View Details
+    </button>
   </div>
-
-  <div class="products-container">
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product10/product101.jpg" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product10/product102.jpg" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product10/product103.avif" alt="Image 2" />
-      </div>
-    </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product11/product111.avif" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product11/product112.jpg" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product11/product113.webp" alt="Image 2" />
-      </div>
-    </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
-
-  <div class="products-container">
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="assets/product12/product121.webp" alt="Image 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/product12/product122.avif" alt="Image 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/product12/product123.webp" alt="Image 2" />
-      </div>
-    </div>
-    <button type="button" class="btn custom-btn">SHOW DETAILS</button>
-  </div>
+  
+  }
 </section>

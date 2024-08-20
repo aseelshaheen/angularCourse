@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@400;700&display=swap');
 
-
-
 *{
   font-family: 'Texturina'
 }
 
 .display{
-
     margin-left: 100px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
 
 .custom-btn {
   height: 40px;
@@ -36,8 +37,8 @@
 
 .slideshow-container {
   position: relative;
-  width: 400px;
-  height: 300px; 
+  width: 600px;
+  height: 400px; 
 }
 
 .slide {

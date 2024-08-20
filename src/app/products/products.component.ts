@@ -1,40 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component'; 
+import { TopHeaderComponent } from '../top-header/top-header.component';
+import { ProductListComponent } from '../product-list/product-list.component';
+import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
-import { Product1ImagesComponent } from "../products-page/product1-images/product1-images.component";
-import { Product2ImagesComponent } from "../products-page/product2-images/product2-images.component";
-import { Product3ImagesComponent } from "../products-page/product3-images/product3-images.component";
-import { Product4ImagesComponent } from "../products-page/product4-images/product4-images.component";
-import { Product5ImagesComponent } from "../products-page/product5-images/product5-images.component";
-import { Product6ImagesComponent } from "../products-page/product6-images/product6-images.component";
 
 @Component({
   selector: 'products',
   standalone: true,
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    TopHeaderComponent,
+    RouterModule
+    
+  ],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
-  imports: [Product1ImagesComponent,
-    Product2ImagesComponent,
-    Product3ImagesComponent,
-    Product4ImagesComponent,
-    Product5ImagesComponent, 
-    Product6ImagesComponent,
-    RouterModule
-  ]
 })
-export class ProductsComponent {
-   
+export class ProductsComponent implements OnInit {
+  products: any[] = [];
 
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
- }
+  ngOnInit(): void {
+    this.products = ProductListComponent.getInstance().getProducts();
+    
+  }
+  
 
-// import { Component } from '@angular/core';
-// import { Product1ImagesComponent } from "../products-page/product1-images/product1-images.component";
+  viewProductDetails(id: number): void {
+    this.router.navigate(['/product', id]);
+  }
 
-// @Component({
-//   selector: 'products',
-//   standalone: true,
-//   templateUrl: './products.component.html',
-//   styleUrls: ['./products.component.css'],
-//   imports: [Product1ImagesComponent]
-// })
-// export class ProductsComponent { }
+  getAttribute(product: any, attributeName: string): any {
+    const attribute = product.attributes.find((attr: { key: string; value: any; }) => attr.key === attributeName);
+    return attribute ? attribute.value : null;
+  }
+  
+}
